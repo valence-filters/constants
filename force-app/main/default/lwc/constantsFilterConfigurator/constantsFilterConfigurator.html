@@ -1,0 +1,11 @@
+<template>
+	<p class="slds-m-vertical_small">The Constants Filter allows you to add static values to the source fields of a record so they can be used by mappings and other Filters.</p>
+
+	<lightning-input label="Field Name"
+					 onblur={fieldChange}
+					 value={configuration.fieldName}></lightning-input>
+
+	<lightning-input label="Value"
+					 onblur={valueChange}
+					 value={configuration.value}></lightning-input>
+</template>

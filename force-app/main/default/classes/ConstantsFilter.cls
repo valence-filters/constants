@@ -5,6 +5,10 @@ global with sharing class ConstantsFilter implements valence.SchemaAwareTransfor
 
 	private List<Configuration> configs = new List<Configuration>();
 
+	// -------------------------------------
+	// ----- ConfigurablePerLinkFilter -----
+	// -------------------------------------
+
 	public String getFilterConfigurationLightningComponent() {
 		return 'c:constantsFilterConfigurator';
 	}
@@ -37,6 +41,10 @@ global with sharing class ConstantsFilter implements valence.SchemaAwareTransfor
 		}
 	}
 
+	// --------------------------------
+	// ----- TransformationFilter -----
+	// --------------------------------
+
 	public Boolean validFor(valence.LinkContext context) {
 		return true;
 	}
@@ -51,6 +59,10 @@ global with sharing class ConstantsFilter implements valence.SchemaAwareTransfor
 		}
 	}
 
+	// -------------------------------------------
+	// ----- SchemaAwareTransformationFilter -----
+	// -------------------------------------------
+
 	public valence.FilterSchema describeSchema(valence.LinkContext context) {
 		valence.FilterSchema schema = new valence.FilterSchema();
 
@@ -60,6 +72,10 @@ global with sharing class ConstantsFilter implements valence.SchemaAwareTransfor
 		}
 		return schema;
 	}
+
+	// -------------------
+	// ----- Utility -----
+	// -------------------
 
 	private Configuration buildConfiguration(String jsonData) {
 		// we deserializeUntyped so that we can let value be the Object type, which the JSON class will not deserialize to if class-restricted

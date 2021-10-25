@@ -88,7 +88,7 @@ private class ConstantsFilterTests {
 
 		ConstantsFilter filter = new ConstantsFilter();
 
-		System.assertEquals('c:ConstantsFilterConfigurator', filter.getFilterConfigurationLightningComponent());
+		System.assertEquals('c:constantsFilterConfigurator', filter.getFilterConfigurationLightningComponent());
 		System.assertEquals(null, filter.getFilterConfigurationStructure());
 
 		String config = JSON.serialize(new Map<String, Object>{

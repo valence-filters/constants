@@ -54,7 +54,7 @@ global with sharing class ConstantsFilter implements valence.SchemaAwareTransfor
 		// add our static values to each record
 		for(valence.RecordInFlight record : records) {
 			for(Configuration config : configs) {
-				record.setOriginalProperty(valence.FieldPath.buildPath(config.fieldName), config.value);
+				record.setOriginalPropertyValue(config.fieldName, config.value);
 			}
 		}
 	}

@@ -37,13 +37,13 @@ private class ConstantsFilterTests {
 
 		System.assertEquals(2, records.size());
 
-		System.assertEquals('George', records[0].getOriginalProperty(valence.FieldPath.buildPath('name')));
-		System.assertEquals('North', records[0].getOriginalProperty(valence.FieldPath.buildPath('region')));
-		System.assertEquals('small', records[0].getOriginalProperty(valence.FieldPath.buildPath('size')));
+		System.assertEquals('George', records[0].getOriginalPropertyValue('name'));
+		System.assertEquals('North', records[0].getOriginalPropertyValue('region'));
+		System.assertEquals('small', records[0].getOriginalPropertyValue('size'));
 
-		System.assertEquals('Samantha', records[1].getOriginalProperty(valence.FieldPath.buildPath('name')));
-		System.assertEquals('North', records[1].getOriginalProperty(valence.FieldPath.buildPath('region')));
-		System.assertEquals('small', records[1].getOriginalProperty(valence.FieldPath.buildPath('size')));
+		System.assertEquals('Samantha', records[1].getOriginalPropertyValue('name'));
+		System.assertEquals('North', records[1].getOriginalPropertyValue('region'));
+		System.assertEquals('small', records[1].getOriginalPropertyValue('size'));
 	}
 
 	@IsTest static void testNoConfigs() {
@@ -70,13 +70,13 @@ private class ConstantsFilterTests {
 
 		System.assertEquals(2, records.size());
 
-		System.assertEquals('George', records[0].getOriginalProperty(valence.FieldPath.buildPath('name')));
-		System.assertEquals('South', records[0].getOriginalProperty(valence.FieldPath.buildPath('region')));
-		System.assertEquals(null, records[0].getOriginalProperty(valence.FieldPath.buildPath('size')));
+		System.assertEquals('George', records[0].getOriginalPropertyValue('name'));
+		System.assertEquals('South', records[0].getOriginalPropertyValue('region'));
+		System.assertEquals(null, records[0].getOriginalPropertyValue('size'));
 
-		System.assertEquals('Samantha', records[1].getOriginalProperty(valence.FieldPath.buildPath('name')));
-		System.assertEquals(null, records[1].getOriginalProperty(valence.FieldPath.buildPath('region')));
-		System.assertEquals(null, records[1].getOriginalProperty(valence.FieldPath.buildPath('size')));
+		System.assertEquals('Samantha', records[1].getOriginalPropertyValue('name'));
+		System.assertEquals(null, records[1].getOriginalPropertyValue('region'));
+		System.assertEquals(null, records[1].getOriginalPropertyValue('size'));
 	}
 
 	@IsTest static void testRestrictions() {
